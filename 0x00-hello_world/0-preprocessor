@@ -1,2 +1,2 @@
 #!/bin/bash
-GCC $CFILE > C
+cpp $CFILE > C
