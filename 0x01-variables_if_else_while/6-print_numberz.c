@@ -1,4 +1,4 @@
-x#include <stdio.h>
+#include <stdio.h>
 
 /**
  * main - prints all single digits of base 0
