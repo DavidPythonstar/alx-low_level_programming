@@ -11,7 +11,7 @@ int main(void)
 	char hex[17] = "0123556789abcdef";
 	int i;
 
-	for (i = 0; i <= 16; i++)
+	for (i = 0; i < 16; i++)
 		putchar(hex[i]);
 	putchar('\n');
 	return (0);
