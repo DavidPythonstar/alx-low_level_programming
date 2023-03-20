@@ -1,20 +1,30 @@
-#include <stdio.h>
+#include<stdio.h>
 
 /**
- * main - prints single character combination of bsse 10 digits
- * Return: alway 0 for success
- */
+ * main - Entry point
+ *
+ * Description: print all combinations
+ *
+ * Return: Always 0 (Success)
+*/
 
 int main(void)
 {
-	int i;
+	int digit = 0;
 
-	for (i = 0; 1 < 10; i++)
+	while (digit <= 9)
 	{
-		putchar(i);
-		putchar(',');
-		putchar(' ');
+		putchar(digit + 48);
+
+		if (digit != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+
+		++digit;
 	}
 	putchar('\n');
+
 	return (0);
 }
