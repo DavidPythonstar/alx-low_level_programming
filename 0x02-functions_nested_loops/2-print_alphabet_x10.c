@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_alphabet - prints all small case alphabets 10 x
+ * print_alphabet_x10 - prints all small case alphabets 10 x
  * Return: void
  */
 
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	char c;
 	int i = 0;
