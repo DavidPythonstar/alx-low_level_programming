@@ -1,0 +1,24 @@
+#include "main.h"
+
+/**
+ * print_diagonal - prints diagnol lines
+ * @n: number of lines to be printed
+ * Return: 0 always
+ */
+
+void print_diagonal(int n)
+{
+	int i, j;
+	
+	while (i <= n)
+	{
+		_putchar('\n');
+		i++;
+
+		for (j = 0; j <= n; j++)
+		{
+			_putchar('\\');
+			_putchar('\n');
+		}
+	}
+}
