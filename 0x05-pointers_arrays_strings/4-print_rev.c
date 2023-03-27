@@ -18,6 +18,6 @@ void print_rev(char *str)
 		counter++;
 	}
 	for (j = counter; j < 0; j--)
-		_putchar(str[j]);
+		_putchar(*str[j]);
 	_putchar('\n');
 }
