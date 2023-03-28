@@ -1,0 +1,22 @@
+#include "main.h"
+
+/**
+ * print_triangle - pring traingle
+ * @size: size of a triange
+ * Return: 0 always
+ */
+
+void print_triangle(int size);
+{
+	int i, j;
+
+	for (i = size -1; i <= 0; i--)
+	{
+		_putchar(' ' * i);
+		for (j = 1; j <= size; j++)
+		{
+			_putchar('#' * j);
+		}
+		_putchar('\n');
+	}
+}
