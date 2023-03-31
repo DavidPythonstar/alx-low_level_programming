@@ -1,23 +1,28 @@
 #include "main.h"
 
 /**
- * cap_string - capitalise leter after word separaters
- * @s: the stribg
- * Return: captilized string
+ *  cap_string - capitalizes all words of a string.
+ *
+ * @str: string to be capitalized
+ *
+ * Return: capitallized str
  */
 
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
-	int i;
+	int x;
+	int y;
+	char sep[] = " \t\n,;.!?\"(){}";
 
-	for (i = 0; s[i] != '\0'; i++)
+	x = 1;
+	if (str[0] >= 'a' && str[0] <= 'z')
+		str[0] -= ('a' - 'A');
+	while (str[x] != '\0')
 	{
-		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
-				s[i] == ',' || s[i] == ';' || s[i] == '.' ||
-				s[i] == '!' || s[i] == '?' || s[i] == '\"' ||
-				s[i] == '(' || s[i] == ')' || s[i] == '{' ||( s[i] == '}' &&
-				s[i + 1] > 96 && s[i + 1] < 123))
-			s[i + 1] -= 32;
+		for (y = 0; sep[y] != '\0'; y++)
+			if (str[x - 1] == sep[y] && (str[x] >= 'a' && str[x] <= 'z'))
+				str[x] -= ('a' - 'A');
+		x++;
 	}
-	return (s);
+	return (str);
 }
