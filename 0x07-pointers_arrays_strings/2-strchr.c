@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
  * _strchr - finds the occurance of  a given character
@@ -13,7 +12,7 @@ char *_strchr(char *s, char c)
 	int i;
 	char *d;
 
-	d = NULL;
+	d = '\0';
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
