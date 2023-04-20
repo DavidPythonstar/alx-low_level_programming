@@ -2,7 +2,7 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all - print the sum of all variables 
+ * sum_them_all - print the sum of all variables
  * @n: number of perimeters
  * Return: sum of all perimeters
  */
