@@ -7,35 +7,27 @@
  * @h: beginning of the linked list
  * Return: size_t
  */
-
 size_t free_listint_safe(listint_t **h)
 {
 	size_t counter = 0;
-	int difference;
-	listint_t *temp;
+	listint_t *temp, *current = *h, *prev = NULL;
 
 	if (!h || !*h)
 		return (0);
 
-	while (*h != NULL)
+	while (current != NULL)
 	{
-		difference = *h - (*h)->next;
-		if (difference > 0)
+		if (prev != NULL && prev >= current)
 		{
-			temp = (*h)->next;
-			free(*h);
-			*h = temp;
-			counter++;
+		break;
 		}
-		else
-		{
-			free(*h);
-			*h = NULL;
-			counter++;
-			break;
-		}
-	}
 
+		temp = current->next;
+		free(current);
+		prev = current;
+		current = temp;
+		counter++;
+	}
 	*h = NULL;
 
 	return (counter);
