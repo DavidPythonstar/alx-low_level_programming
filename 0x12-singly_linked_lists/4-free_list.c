@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- * free - frees the linked list
+ * free_list - frees the linked list
  * @head: beginning of the linked list
  * Return: None
  */
