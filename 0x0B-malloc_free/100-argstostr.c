@@ -1,49 +1,43 @@
-#include <mstdio.h>
-#include "main.h"
 #include <stdlib.h>
 
 /**
-* argstostr - adds all args
-* @ac: argument count.
-* @av: pointer to array of size ac.
-* Return: char
+ * argstostr - adds all args
+ * @ac: argument counter
+ * @av: args o  to added
+ * Return: a pointer to a new string
 */
 
 char *argstostr(int ac, char **av)
 {
-	int i, j, k, size = 0;
-	char *arg;
-
+	int i, j, k, length = 0;
+	char *str;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	while (i < ac)
-	
-		while (av[i][j])
-		{
-			size++;
-			j++;
-		}
-		size++;
-		i++;
-	}
-	arg = malloc((sizeof(char) * size) + 1);
-	if (arg == NULL)
-		return (NULL);
-	i = 0;
-	while (i < ac)
+
+	for (i = 0; i < ac; i++)
 	{
-		j = 0;
-		while (av[i][j])
+		for (j = 0; av[i][j] != '\0'; j++)
+			length++;
+		length++;
+	}
+
+	str = malloc((length + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
+
+	k = 0;
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			arg[k] = av[i][j];
-			j++;
+			str[k] = av[i][j];
 			k++;
 		}
-		arg[k] = '\n';
+		str[k] = '\n';
 		k++;
-		i++;
 	}
-	arg[k] = '\0';
-	return (arg);
+	str[k] = '\0';
+
+	return (str);
 }
