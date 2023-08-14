@@ -4,7 +4,7 @@
 /**
  * free_dog - freees the memory of dog pointer
  *
- * @d: dog point pointer 
+ * @d: dog point pointer
  * Return: void
  */
 void free_dog(dog_t *d)
