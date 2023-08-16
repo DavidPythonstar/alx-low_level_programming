@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * int_index - searches an interger 
+ * int_index - searches an interger
  * @array: to searched
  * @size: of the array
  * @cmp: function pointer
- * Return: Int of the search 
+ * Return: Int of the search
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
@@ -21,5 +21,5 @@ int int_index(int *array, int size, int (*cmp)(int))
 				return (i);
 		}
 	}
-
 	return (-1);
+}
