@@ -6,7 +6,7 @@
 /**
  * read_textfile - eads a text file and prints it to the POSIX standard output
  * @filename: file to be read
- * @latters: latters in the file
+ * @letters: latters in the file
  * Return: size_t
  */
 
